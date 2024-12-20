@@ -22,7 +22,7 @@ const result = document.querySelector (".js-result");
 let userScore = document.querySelector (".js-userScore");
 let compuScore = document.querySelector (".js-compuScore");
 
-// empieza el contador de las variables a 0
+// empieza el contador de las variables a 0 que luego se relaciones con let userScore y let compuScore
 let userScore1 = 0;
 let compuScore1 = 0;
 
@@ -56,7 +56,7 @@ function handleClick (event) {
  
     
     // Lo que pasa
-        // gana usuario
+        // empate
     if (userMove === compuMove){
         result.innerHTML = "Empate";
 
@@ -64,11 +64,11 @@ function handleClick (event) {
     }else if (
         (userMove === "piedra" && compuMove === "tijera") || (userMove === "papel" && compuMove === "piedra") || (userMove === "tijera" && compuMove === "papel")){
         result.innerHTML = "Has ganado";
-        userScore1++;
+        userScore1 = userScore1 + 1;
         // pierde usuario
     } else {
         result.innerHTML = "Has perdido"
-        compuScore1++;
+        compuScore1 = compuScore1 + 1;
     }
 
     compuScore.innerHTML = `Computadora: ${compuScore1}`;
