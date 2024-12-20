@@ -17,7 +17,7 @@
 
 const select = document.querySelector (".js-select");
 const btn = document.querySelector (".js-btn");
-const result = document.querySelector (".js-recult");
+const result = document.querySelector (".js-result");
 
 
 
@@ -40,14 +40,25 @@ function resultCompu (){
 }
 
 
-
 // Funcion con todo lo que tiene que pasar en el boton
 function handleClick (event) {
     event.preventDefault ();
-    resultCompu();
-    console.log;
-
+    
+    // Los dos resultados
+    const userMove = select.value;
+    const compuMove = resultCompu();
+    
+    // Lo que pasa
+    if (userMove === compuMove){
+        result.innerHTML = "Empate";
+    }else if (
+        (userMove === "piedra" && compuMove === "tijera") || (userMove === "papel" && compuMove === "piedra") || (userMove === "tijera" && compuMove === "papel")){
+        result.innerHTML = "Has ganado";
+    } else {
+        result.innerHTML = "Has perdido"
+    }
 }
+
 // Escuchamos el boton "jugar" btn
 btn.addEventListener ("click", handleClick)
 
