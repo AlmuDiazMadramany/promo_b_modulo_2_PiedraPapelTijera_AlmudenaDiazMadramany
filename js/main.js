@@ -19,7 +19,12 @@
 const select = document.querySelector (".js-select");
 const btn = document.querySelector (".js-btn");
 const result = document.querySelector (".js-result");
+let userScore = document.querySelector (".js-userScore");
+let compuScore = document.querySelector (".js-compuScore");
 
+// empieza el contador de las variables a 0
+let userScore1 = 0;
+let compuScore1 = 0;
 
 
 // Generar numero aleatorio
@@ -48,20 +53,31 @@ function handleClick (event) {
     // Los dos resultados
     const userMove = select.value;
     const compuMove = resultCompu();
+ 
     
     // Lo que pasa
         // gana usuario
     if (userMove === compuMove){
         result.innerHTML = "Empate";
+
         //gana usuario
     }else if (
         (userMove === "piedra" && compuMove === "tijera") || (userMove === "papel" && compuMove === "piedra") || (userMove === "tijera" && compuMove === "papel")){
         result.innerHTML = "Has ganado";
+        userScore1++;
         // pierde usuario
     } else {
         result.innerHTML = "Has perdido"
+        compuScore1++;
     }
+
+    compuScore.innerHTML = `Computadora: ${compuScore1}`;
+    userScore.innerHTML= `Jugador: ${userScore1}`;
 }
+
+
+
+
 
 // Escuchamos el boton "jugar" btn
 btn.addEventListener ("click", handleClick)

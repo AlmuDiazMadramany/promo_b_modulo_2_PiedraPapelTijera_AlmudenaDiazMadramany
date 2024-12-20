@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -42,4 +43,21 @@
    color: #59cce3;
    font-size: 20px;
    font-weight: 700;
+   padding-bottom: 20px;
 
+}
+
+.jugada{
+   
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+     align-items: center;
+     border: 1px solid #59cce3;
+     padding: 30px;
+    
+}
+
+.resultados{
+    color: #59cce3;
+}
