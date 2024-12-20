@@ -34,6 +34,7 @@ function getRandomNumber(max) {
     }
 
 // Comprobar el resultado dque da la computadora
+
 function resultCompu (){
     const numRandom = getRandomNumber (9);
         if (numRandom <= 3){
@@ -45,8 +46,8 @@ function resultCompu (){
         }
 }
 
-
 // Funcion con todo lo que tiene que pasar en el boton
+
 function handleClick (event) {
     event.preventDefault ();
     
@@ -75,10 +76,7 @@ function handleClick (event) {
     userScore.innerHTML= `Jugador: ${userScore1}`;
 }
 
-
-
-
-
 // Escuchamos el boton "jugar" btn
+
 btn.addEventListener ("click", handleClick)
 
