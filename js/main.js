@@ -14,6 +14,7 @@
         gana comptadora: Has perdido    
 */
 
+'use strict';
 
 const select = document.querySelector (".js-select");
 const btn = document.querySelector (".js-btn");
@@ -49,11 +50,14 @@ function handleClick (event) {
     const compuMove = resultCompu();
     
     // Lo que pasa
+        // gana usuario
     if (userMove === compuMove){
         result.innerHTML = "Empate";
+        //gana usuario
     }else if (
         (userMove === "piedra" && compuMove === "tijera") || (userMove === "papel" && compuMove === "piedra") || (userMove === "tijera" && compuMove === "papel")){
         result.innerHTML = "Has ganado";
+        // pierde usuario
     } else {
         result.innerHTML = "Has perdido"
     }
